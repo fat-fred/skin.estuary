@@ -228,7 +228,7 @@
 						<control type="label">
 							<left>10</left>
 							<height>90</height>
-							<width>830</width>u
+							<width>830</width>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Date,[COLOR grey],[/COLOR][CR]]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 							<shadowcolor>text_shadow</shadowcolor>
