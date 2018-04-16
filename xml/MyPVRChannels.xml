@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
+	<onload condition="System.HasAddon(script.skin.helper.service)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 	<backgroundcolor>background</backgroundcolor>
-	<views>50,51</views>
+	<views>50</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<include>DefaultBackground</include>
@@ -16,7 +17,7 @@
 					<right>918</right>
 					<bottom>list_y_offset</bottom>
 					<movement>3</movement>
-					<focusposition>5</focusposition>
+					<focusposition>4</focusposition>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>vertical</orientation>
 					<onleft>9000</onleft>
@@ -36,24 +37,32 @@
 							<visible>Control.hasFocus(50)</visible>
 						</control>
 						<control type="image">
-							<right>20</right>
+							<left>12</left>
 							<top>10</top>
 							<width>80</width>
 							<height>70</height>
-							<aspectratio align="right">keep</aspectratio>
+							<aspectratio align="left">keep</aspectratio>
 							<texture>$INFO[listitem.icon]</texture>
+						</control>
+						<control type="image">
+							<left>102</left>
+							<top>0</top>
+							<width>895</width>
+							<height>90</height>
+							<aspectratio align="left">stretch</aspectratio>
+							<texture background="true">http://localhost:52307/getpvrthumb&title=$ESCINFO[Listitem.Title]&type=banner</texture>
 						</control>
 						<control type="progress">
 							<left>105</left>
-							<top>58</top>
-							<width>50</width>
-							<height>12</height>
-							<midtexture border="3">progress/texturebg_white.png</midtexture>
+							<top>59</top>
+							<width>80</width>
+							<height>20</height>
+							<midtexture border="5">progress/texturebg_white.png</midtexture>
 							<visible>ListItem.HasEpg</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
-							<right>110</right>
+							<right>15</right>
 							<top>25</top>
 							<width>40</width>
 							<height>40</height>
@@ -63,7 +72,7 @@
 							<left>105</left>
 							<top>8</top>
 							<height>90</height>
-							<right>120</right>
+							<right>55</right>
 							<aligny>top</aligny>
 							<font>font14</font>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
@@ -71,12 +80,12 @@
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
-							<left>165</left>
-							<top>46</top>
+							<left>195</left>
+							<top>44</top>
 							<height>90</height>
-							<right>120</right>
+							<right>55</right>
 							<aligny>top</aligny>
-							<font>font12</font>
+							<font>font14</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -94,24 +103,24 @@
 					</focusedlayout>
 					<itemlayout height="90">
 						<control type="image">
-							<right>20</right>
-							<top>10</top>
-							<width>80</width>
-							<height>70</height>
-							<aspectratio align="right">keep</aspectratio>
-							<texture>$INFO[listitem.icon]</texture>
+							<left>102</left>
+							<top>0</top>
+							<width>895</width>
+							<height>90</height>
+							<aspectratio align="left">stretch</aspectratio>
+							<texture background="true">http://localhost:52307/getpvrthumb&title=$ESCINFO[Listitem.Title]&type=banner</texture>
 						</control>
 						<control type="progress">
 							<left>105</left>
-							<top>58</top>
-							<width>50</width>
-							<height>12</height>
+							<top>61</top>
+							<width>80</width>
+							<height>16</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
 							<visible>ListItem.HasEpg</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
-							<right>110</right>
+							<right>15</right>
 							<top>25</top>
 							<width>40</width>
 							<height>40</height>
@@ -121,7 +130,7 @@
 							<left>105</left>
 							<top>8</top>
 							<height>90</height>
-							<right>120</right>
+							<right>55</right>
 							<aligny>top</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -129,12 +138,12 @@
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
-							<left>165</left>
-							<top>46</top>
+							<left>195</left>
+							<top>45</top>
 							<height>90</height>
-							<right>120</right>
+							<right>55</right>
 							<aligny>top</aligny>
-							<font>font12</font>
+							<font>font13</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 							<textcolor>grey</textcolor>
@@ -151,127 +160,13 @@
 							<textcolor>grey</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
-					</itemlayout>
-				</control>
-				<control type="fixedlist" id="51">
-					<left>0</left>
-					<top>list_y_offset</top>
-					<right>920</right>
-					<bottom>list_y_offset</bottom>
-					<movement>4</movement>
-					<focusposition>6</focusposition>
-					<scrolltime tween="cubic" easing="out">500</scrolltime>
-					<orientation>vertical</orientation>
-					<onleft>9000</onleft>
-					<onright>73</onright>
-					<onup>51</onup>
-					<ondown>51</ondown>
-					<viewtype label="List">list</viewtype>
-					<preloaditems>1</preloaditems>
-					<pagecontrol>73</pagecontrol>
-					<focusedlayout height="70">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
-							<bottom>0</bottom>
-							<texture colordiffuse="button_focus">lists/focus.png</texture>
-							<visible>Control.hasFocus(51)</visible>
-						</control>
-						<control type="progress">
-							<right>10</right>
-							<top>25</top>
-							<width>50</width>
-							<height>12</height>
-							<colordiffuse>88FFFFFF</colordiffuse>
-							<midtexture border="3">progress/texturebg_white.png</midtexture>
-							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
-							<info>ListItem.Progress</info>
-						</control>
-						<control type="image">
-							<right>15</right>
-							<top>9</top>
-							<width>40</width>
-							<height>40</height>
-							<texture>$VAR[PVRStatusImageVar]</texture>
-						</control>
-						<control type="label">
-							<left>105</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<right>90</right>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-						<control type="label">
-							<left>320</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<right>90</right>
-							<aligny>center</aligny>
-							<align>right</align>
-							<label>$INFO[ListItem.Title]</label>
-						</control>
-						<control type="label">
 							<left>12</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<width>75</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font32_title</font>
-							<label>$INFO[ListItem.ChannelNumberLabel]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-						</control>
-					</focusedlayout>
-					<itemlayout height="70">
-						<control type="progress">
-							<right>10</right>
-							<top>25</top>
-							<width>50</width>
-							<height>12</height>
-							<colordiffuse>88FFFFFF</colordiffuse>
-							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
-							<info>ListItem.Progress</info>
-						</control>
-						<control type="image">
-							<right>15</right>
-							<top>9</top>
-							<width>40</width>
-							<height>40</height>
-							<texture>$VAR[PVRStatusImageVar]</texture>
-						</control>
-						<control type="label">
-							<left>105</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<right>90</right>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-						</control>
-						<control type="label">
-							<left>320</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<right>90</right>
-							<aligny>center</aligny>
-							<align>right</align>
-							<label>$INFO[ListItem.Title]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<textcolor>grey</textcolor>
-						</control>
-						<control type="label">
-							<left>12</left>
-							<top>0</top>
-							<bottom>0</bottom>
-							<width>75</width>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font32_title</font>
-							<label>$INFO[ListItem.ChannelNumberLabel]</label>
-							<textcolor>grey</textcolor>
-							<shadowcolor>text_shadow</shadowcolor>
+							<top>10</top>
+							<width>80</width>
+							<height>70</height>
+							<aspectratio align="left">keep</aspectratio>
+							<texture>$INFO[listitem.icon]</texture>
 						</control>
 					</itemlayout>
 				</control>
@@ -305,16 +200,24 @@
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
 			</include>
+			<control type="image">
+				<left>1020</left>
+				<bottom>0</bottom>
+				<width>890</width>
+				<height>90</height>
+				<aspectratio align="left">stretch</aspectratio>
+				<texture background="true">http://localhost:52307/getpvrthumb&title=$ESCINFO[Listitem.NextTitle]&type=banner</texture>
+			</control>
 			<control type="label">
-				<right>20</right>
+				<left>1040</left>
 				<include>OpenClose_Right</include>
-				<bottom>10</bottom>
+				<bottom>15</bottom>
 				<width>850</width>
 				<height>60</height>
 				<visible>!String.isempty(ListItem.NextTitle)</visible>
 				<label>[COLOR grey]$LOCALIZE[19031]:[/COLOR] $INFO[ListItem.NextStartTime]: $INFO[ListItem.NextTitle]</label>
 				<shadowcolor>black</shadowcolor>
-				<align>right</align>
+				<align>left</align>
 				<aligny>center</aligny>
 				<wrapmultiline>true</wrapmultiline>
 				<font>font27</font>
