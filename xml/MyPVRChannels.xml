@@ -101,14 +101,6 @@
 						</control>
 					</focusedlayout>
 					<itemlayout height="90">
-						<control type="image">
-							<left>102</left>
-							<top>0</top>
-							<width>895</width>
-							<height>90</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture background="true">http://localhost:52307/getpvrthumb&title=$ESCINFO[Listitem.Title]&type=banner</texture>
-						</control>
 						<control type="progress">
 							<left>105</left>
 							<top>61</top>
