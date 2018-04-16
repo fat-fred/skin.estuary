@@ -138,9 +138,16 @@
 				</control>
 				<control type="radiobutton" id="6060">
 					<include>MediaMenuItemsCommon</include>
-					<label>$LOCALIZE[31127]</label>
+					<label> PVR Artwork</label>
 					<selected>Control.IsVisible(50)</selected>
-					<onclick>Container.NextViewMode</onclick>
+					<onclick>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onclick>
+					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
+				</control>
+				<control type="radiobutton" id="6061">
+					<include>MediaMenuItemsCommon</include>
+					<label> PVR ExtraArtwork</label>
+					<selected>Control.IsVisible(50)</selected>
+					<onclick>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onclick>
 					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="button" id="6053">
