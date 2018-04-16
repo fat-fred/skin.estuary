@@ -145,9 +145,16 @@
 				</control>
 				<control type="radiobutton" id="6061">
 					<include>MediaMenuItemsCommon</include>
-					<label> PVR ExtraArtwork</label>
+					<label> PVR ExtraFanart</label>
 					<selected>Control.IsVisible(50)</selected>
-					<onclick>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onclick>
+					<onclick>Skin.SetBool(SkinHelper.EnableExtraFanart)</onclick>
+					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
+				</control>
+				<control type="radiobutton" id="6061">
+					<include>MediaMenuItemsCommon</include>
+					<label> PVR ExtraPoster</label>
+					<selected>Control.IsVisible(50)</selected>
+					<onclick>Skin.SetBool(SkinHelper.EnableExtraPoster)</onclick>
 					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="button" id="6053">
