@@ -140,21 +140,21 @@
 					<include>MediaMenuItemsCommon</include>
 					<label> PVR Artwork</label>
 					<selected>Skin.HasSetting(SkinHelper.EnablePVRThumbs)</selected>
-    <onclick>Skin.ToggleSetting(SkinHelper.EnablePVRThumbs)</onclick>
+    					<onclick>Skin.ToggleSetting(SkinHelper.EnablePVRThumbs)</onclick>
 					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="radiobutton" id="6061">
 					<include>MediaMenuItemsCommon</include>
 					<label> PVR ExtraFanart</label>
 					<selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
-    <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
+    					<onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
 					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="radiobutton" id="6062">
 					<include>MediaMenuItemsCommon</include>
 					<label> PVR ExtraPoster</label>
 					<selected>Skin.HasSetting(SkinHelper.EnableExtraposter)</selected>
-    <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraPoster)</onclick>
+				    	<onclick>Skin.ToggleSetting(SkinHelper.EnableExtraPoster)</onclick>
 					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="button" id="6053">
