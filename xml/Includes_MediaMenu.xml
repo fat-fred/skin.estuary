@@ -150,7 +150,7 @@
 					<onclick>Skin.SetBool(SkinHelper.EnableExtraFanart)</onclick>
 					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
-				<control type="radiobutton" id="6061">
+				<control type="radiobutton" id="6062">
 					<include>MediaMenuItemsCommon</include>
 					<label> PVR ExtraPoster</label>
 					<selected>Control.IsVisible(50)</selected>
