@@ -20,6 +20,15 @@
 			<height>180</height>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdvideosettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(playerprocessinfo) | Window.IsVisible(osdcmssettings) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(pvrchannelguide)]</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
+			<control type="image">
+				<left>0</left>
+				<bottom>0</bottom>
+				<width>100%</width>
+				<height>112</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture>$INFO[Window(Home).Property(SkinHelper.Player.Art.Banner)]</texture>
+				<!-- texture>nfs://10.0.0.254/volume1/video/Artwork/$INFO[VideoPlayer.Title]/banner.jpg</texture-->
+			</control>
 			<control type="label">
 				<right>30</right>
 				<top>0</top>
