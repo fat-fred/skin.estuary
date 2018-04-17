@@ -157,6 +157,12 @@
 				    	<onclick>Skin.ToggleSetting(SkinHelper.EnableExtraPoster)</onclick>
 					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
+            <control type="radiobutton" id="6063">
+                <include>MediaMenuItemsCommon</include>
+                <label> Animierte Poster</label>
+                <onclick>Skin.ToggleSetting(SkinHelper.EnableAnimatedPosters)</onclick>
+                <selected>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</selected>
+            </control>
 				<control type="button" id="6053">
 					<include>MediaMenuItemsCommon</include>
 					<label>$LOCALIZE[31022]</label>
