@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary.tvmod" version="2.1.0" name="Estuary TV Mod" provider-name="phil65, Ichabod Fletchman, Fatfred">
+<addon id="skin.estuary.artworker" version="1.0.0" name="Estuary ArtWorker" provider-name="phil65, Ichabod Fletchman, Fatfred">
 	<requires>
 		<import addon="xbmc.gui" version="5.13.0"/>
 	        <import addon="script.skin.helper.service" version="1.0.0"/>
