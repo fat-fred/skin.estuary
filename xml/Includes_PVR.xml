@@ -110,7 +110,7 @@
 				<width>340</width>
 				<height>240</height>
 				<aspectratio align="bottom" aligny="bottom">keep</aspectratio>
-				<texture>$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</texture>
+				<texture background="true">$VAR[PosterThumb]</texture>
 				<fadetime>200</fadetime>
 			</control>
 			<control type="group">
